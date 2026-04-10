@@ -1,0 +1,70 @@
+body {
+    width: auto;
+    height: auto;
+    background-image: url("wallpaper-home.jpg");
+    background-repeat: repeat;
+}
+header{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.logo-home{
+    width: 400px;  
+}
+.logo-main{
+    width: 150px;
+    text-align: center;
+}
+.nav-home{
+    margin: auto;
+    position: relative;
+    display: flex;
+    gap: 50px;
+    text-decoration: none;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+.btn-saibamais{
+    display: block;
+    width: 180px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    background-color: rgb(255, 247, 0);
+    color: rgb(0, 0, 0);
+    justify-self: center;
+}
+.banner-home{
+    width: 1000px;
+    text-align: center;
+    display: block;
+    justify-self: center;
+    margin-top: 0;
+}
+.title1-home{
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-size: 500%;
+    margin: 0;
+    text-align: center;
+}
+.title2-home{
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-size: 500%;
+    margin: 0;  
+    text-align: center;
+    padding: 0;
+}
+.desc-home{
+    color: white;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
