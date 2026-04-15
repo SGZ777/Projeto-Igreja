@@ -102,3 +102,17 @@ a{
     font-size: 20px;
     justify-self: center;
 }
+/* PROGRAMAÇÃO */
+
+.title-programacao{
+    color: white;
+    text-align: center;
+}
+
+.txt-programacao-cultos{
+    color: rgb(252, 235, 0);
+    font-size: 25px;
+    justify-self: center;
+    line-height: 3.5;
+    font-weight: bold;
+}
