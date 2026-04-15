@@ -107,12 +107,12 @@ a{
 .title-programacao{
     color: white;
     text-align: center;
+    font-size: 40px;
 }
 
 .txt-programacao-cultos{
     color: rgb(252, 235, 0);
     font-size: 25px;
     justify-self: center;
-    line-height: 3.5;
-    font-weight: bold;
+    line-height: 4.0;
 }
