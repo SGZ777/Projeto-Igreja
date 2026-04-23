@@ -1,27 +1,40 @@
 body {
     margin: 0;
     min-height: 100vh;
-    background-image: url("../images/wallpaper-home.jpg");
+    background-image: linear-gradient(rgba(6, 18, 43, 0.55), rgba(6, 18, 43, 0.72)), url("../images/wallpaper-home.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     font-family: "Poppins", sans-serif;
 }
 
-header{
+:root {
+    --color-gold: #f5cf54;
+    --color-gold-strong: #ffd447;
+    --color-blue-deep: #07214f;
+    --color-panel: rgba(255, 255, 255, 0.12);
+    --color-border: rgba(255, 255, 255, 0.2);
+    --color-text: #ffffff;
+    --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+header {
     display: flex;
     margin: 0;
     padding: 0;
 }
-.logo-home{
-    width: 400px;  
+
+.logo-home {
+    width: 400px;
     margin: 10px;
 }
-.logo-main{
+
+.logo-main {
     width: 150px;
     text-align: center;
 }
-.nav-home{
+
+.nav-home {
     margin: auto;
     position: relative;
     display: flex;
@@ -31,7 +44,8 @@ header{
     color: white;
     font-family: "Poppins", sans-serif;
 }
-.btn-saibamais{
+
+.btn-saibamais {
     display: block;
     width: 180px;
     height: 50px;
@@ -44,51 +58,88 @@ header{
     margin-bottom: 50px;
     cursor: pointer;
     font-weight: 500;
- box-shadow: 9px 9px 13px -3px rgba(0,0,0,0.75);
--webkit-box-shadow: 9px 9px 13px -3px rgba(0,0,0,0.75);
--moz-box-shadow: 9px 9px 13px -3px rgba(0,0,0,0.75);
+    box-shadow: 9px 9px 13px -3px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 9px 9px 13px -3px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 9px 9px 13px -3px rgba(0, 0, 0, 0.75);
 }
-.btn-saibamais:hover{
+
+.btn-saibamais:hover {
     background-color: rgb(1, 55, 148);
     color: rgb(251, 251, 251);
-    box-shadow: 9px 9px 13px -3px rgba(0,0,0,1);
+    box-shadow: 9px 9px 13px -3px rgba(0, 0, 0, 1);
 }
-.banner-home{
+
+.banner-home {
     width: 450px;
     text-align: center;
     display: block;
     justify-self: center;
 }
-.title1-home{
+
+.title1-home {
     font-family: "Poppins", sans-serif;
     color: white;
     font-size: 400%;
     margin: 0;
-    text-align: center; 
-
+    text-align: center;
 }
-.title2-home{
+
+.title2-home {
     font-family: "Poppins", sans-serif;
     color: white;
     font-size: 400%;
-    margin: 0;  
+    margin: 0;
     text-align: center;
     padding: 0;
 }
-.desc-home{
+
+.desc-home {
     color: white;
     text-align: center;
     font-family: "Poppins", sans-serif;
     font-size: 20px;
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
 }
 
+.page-shell {
+    width: min(1120px, calc(100% - 48px));
+    margin: 0 auto 60px;
+}
+
+.page-hero {
+    text-align: center;
+    color: var(--color-text);
+    padding: 32px 24px 24px;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(245, 207, 84, 0.16);
+    border: 1px solid rgba(245, 207, 84, 0.45);
+    color: var(--color-gold);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.page-intro {
+    max-width: 720px;
+    margin: 16px auto 0;
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
 /* DEPARTAMENTOS */
 
-.card-departamento1{
+.card-departamento1 {
     width: 80%;
     height: 500px;
     background-color: rgb(243, 243, 243);
@@ -102,17 +153,138 @@ a{
     font-size: 20px;
     justify-self: center;
 }
+
 /* PROGRAMAÇÃO */
 
-.title-programacao{
+.title-programacao {
     color: white;
     text-align: center;
-    font-size: 40px;
+    font-size: clamp(36px, 5vw, 54px);
+    margin: 18px 0 0;
 }
 
-.txt-programacao-cultos{
-    color: rgb(252, 235, 0);
-    font-size: 25px;
-    justify-self: center;
-    line-height: 4.0;
+.programacao-grid {
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.programacao-card,
+.contato-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(7, 33, 79, 0.8));
+    border: 1px solid var(--color-border);
+    border-radius: 24px;
+    padding: 28px;
+    margin-bottom: 25px;
+    color: var(--color-text);
+    box-shadow: var(--shadow-soft);
+    backdrop-filter: blur(10px);
+}
+
+.programacao-card.destaque,
+.contato-card.destaque {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(7, 33, 79, 0.8));
+}
+
+.programacao-dia,
+.contato-label {
+    display: inline-block;
+    margin-bottom: 16px;
+    color: var(--color-gold);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.programacao-card h2 {
+    margin: 0;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.programacao-horario {
+    margin: 18px 0 10px;
+    color: var(--color-gold-strong);
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.programacao-desc {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.75;
+}
+
+.title-contatos {
+    color: white;
+    text-align: center;
+    font-size: clamp(36px, 5vw, 54px);
+    margin: 18px 0 0;
+}
+
+.contatos-grid {
+    display: flex;
+    gap: 24px;
+    margin-top: 20px;
+}
+
+.txt-contatos {
+    color: white;
+    font-size: 24px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.contato-link:hover {
+    background-color: #fff1b8;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
+    transform: translateY(-2px);
+}
+
+.contato-aux {
+    margin: 14px 0 0;
+    color: rgba(255, 255, 255, 0.82);
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+@media (max-width: 900px) {
+    .programacao-grid,
+    .contatos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .programacao-card.destaque,
+    .contato-card.destaque {
+        transform: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .page-shell {
+        width: min(100% - 28px, 1120px);
+    }
+
+    .page-hero {
+        padding: 20px 6px 16px;
+    }
+
+    .page-intro {
+        font-size: 16px;
+    }
+
+    .programacao-card,
+    .contato-card {
+        padding: 22px;
+        border-radius: 20px;
+    }
+
+    .programacao-card h2 {
+        font-size: 24px;
+    }
+
+    .programacao-horario,
+    .txt-contatos {
+        font-size: 20px;
+    }
 }

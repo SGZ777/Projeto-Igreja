@@ -13,30 +13,66 @@
         rel="stylesheet">
 </head>
 
-<body>
+<body class="bg-home">
 
-    <background="images/bg-home.jpg" class="bg-home">
     <header>
-        <a href="index.html"><img src="images/IGREJA%20PENTECOSTAL.png" alt="Logo Igreja Pentecostal" class="logo-home"></a>
+        <a href="index.html">
+            <img src="images/IGREJA PENTECOSTAL.png" alt="Logo Igreja Pentecostal" class="logo-home">
+        </a>
         <nav>
             <ul class="nav-home">
                 <li><a href="programacao.html">Programação</a></li>
                 <li><a href="departamentos.html">Departamentos</a></li>
-                 <li><a href="contatos.html">Sobre nós</a></li>
-                <li><a href="contatos.html">Contato</a></li>
+                <li><a href="sobrenos.html">Sobre nós</a></li>
+                <li><a href="contatos.html">Contatos</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
-        <p class="title-programacao">Nossa Programação</p>
-        <p class="txt-programacao-cultos">
-            Terça-feira - Culto de Oração e Doutrina das 19:30 às 20:30<br>
-            Quinta-feira - Culto de Oração das 19:30 às 21:30<br>
-            Domingo - Culto da Família das 18:30 às 20:30
-        </p>
-    </section>
-    
-  </body>
+    <main class="page-shell">
+        <section class="page-hero">
+            <span class="hero-tag">Agenda da semana</span>
+            <h1 class="title-programacao">Nossa Programação</h1>
+        </section>
 
+        <section class="programacao-grid">
+            <article class="programacao-card">
+                <span class="programacao-dia">Terça-feira</span>
+                <h2>Culto de Oração e Doutrina</h2>
+                <p class="programacao-horario">19h30 às 20h30</p>
+                <p class="programacao-desc">
+                    Um momento de ensino bíblico, intercessão e fortalecimento espiritual.
+                </p>
+            </article>
+
+            <article class="programacao-card">
+                <span class="programacao-dia">Quinta-feira</span>
+                <h2>Culto de Oração</h2>
+                <p class="programacao-horario">19h30 às 21h30</p>
+                <p class="programacao-desc">
+                    Uma noite dedicada à busca da presença de Deus e ao clamor pela igreja e pelas famílias.
+                </p>
+            </article>
+
+            <article class="programacao-card destaque">
+                <span class="programacao-dia">Domingo</span>
+                <h2>Culto da Família</h2>
+                <p class="programacao-horario">18h30 às 20h30</p>
+                <p class="programacao-desc">
+                    Celebração especial para toda a família, com louvor, Palavra e comunhão.
+                </p>
+            </article>
+
+             <article class="programacao-card destaque">
+                <span class="programacao-dia">Domingo</span>
+                <h2>Escola Bíblica Dominical</h2>
+                <p class="programacao-horario">21h00 às 22h00</p>
+                <p class="programacao-desc">
+                   Espaço de ensino dedicado ao estudo sistemático da Bíblia.
+                </p>
+            </article>
+        </section>
+    </main>
+
+</body>
 </html>
