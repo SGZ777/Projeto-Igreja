@@ -1,14 +1,19 @@
-body {
-    margin: 0;
-    min-height: 100vh;
-    background-image: linear-gradient(rgba(6, 18, 43, 0.55), rgba(6, 18, 43, 0.72)), url("../images/wallpaper-home.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    font-family: "Poppins", sans-serif;
-}
-
-:root {
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --gold: #e8c05a;
+    --gold-light: #f5d98a;
+    --gold-dim: rgba(232, 192, 90, 0.18);
+    --gold-border: rgba(232, 192, 90, 0.35);
+    --navy: #071a3e;
+    --navy-mid: #0d2a5e;
+    --glass: rgba(255, 255, 255, 0.07);
+    --glass-border: rgba(255, 255, 255, 0.14);
+    --text: #f2ede4;
+    --text-muted: rgba(242, 237, 228, 0.65);
+  
     --color-gold: #f5cf54;
     --color-gold-strong: #ffd447;
     --color-blue-deep: #07214f;
@@ -16,36 +21,118 @@ body {
     --color-border: rgba(255, 255, 255, 0.2);
     --color-text: #ffffff;
     --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.28);
-}
-
-header {
-    display: flex;
+  }
+  
+  body {
+    background: url('../images/wallpaper-home.jpg') no-repeat center center fixed;
+    background-size: cover;
     margin: 0;
-    padding: 0;
-}
-
-.logo-home {
-    width: 400px;
-    margin: 10px;
-}
-
-.logo-main {
-    width: 150px;
-    text-align: center;
-}
-
-.nav-home {
-    margin: auto;
-    position: relative;
-    display: flex;
-    margin: 50px;
-    gap: 100px;
+    font-family: 'Outfit', sans-serif;
+  }
+  
+  a {
     text-decoration: none;
     color: white;
+  }
+  
+  /* ── HEADER ── */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 48px;
+    border-bottom: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    background: rgba(7, 26, 62, 0.7);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .logo-home {
+    height: 62px;
+    width: auto;
+    display: block;
+  }
+  
+  .logo-main {
+    width: 150px;
+    text-align: center;
+  }
+  
+  .nav-home {
+    list-style: none;
+    display: flex;
+    gap: 36px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-home a {
+    color: var(--text-muted);
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.25s;
+    position: relative;
+    text-decoration: none;
+  }
+  
+  .nav-home a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition: width 0.3s;
+  }
+  
+  .nav-home a:hover,
+  .nav-home a.active {
+    color: var(--gold);
+  }
+  
+  .nav-home a:hover::after,
+  .nav-home a.active::after {
+    width: 100%;
+  }
+  
+  /* ── HOME ── */
+  .banner-home {
+    width: 450px;
+    text-align: center;
+    display: block;
+    justify-self: center;
+  }
+  
+  .title1-home {
     font-family: "Poppins", sans-serif;
-}
-
-.btn-saibamais {
+    color: white;
+    font-size: 400%;
+    margin: 0;
+    text-align: center;
+  }
+  
+  .title2-home {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    font-size: 400%;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+  }
+  
+  .desc-home {
+    color: white;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+  }
+  
+  .btn-saibamais {
     display: block;
     width: 180px;
     height: 50px;
@@ -61,115 +148,137 @@ header {
     box-shadow: 9px 9px 13px -3px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 9px 9px 13px -3px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 9px 9px 13px -3px rgba(0, 0, 0, 0.75);
-}
-
-.btn-saibamais:hover {
+  }
+  
+  .btn-saibamais:hover {
     background-color: rgb(1, 55, 148);
     color: rgb(251, 251, 251);
     box-shadow: 9px 9px 13px -3px rgba(0, 0, 0, 1);
-}
-
-.banner-home {
-    width: 450px;
-    text-align: center;
-    display: block;
-    justify-self: center;
-}
-
-.title1-home {
-    font-family: "Poppins", sans-serif;
-    color: white;
-    font-size: 400%;
-    margin: 0;
-    text-align: center;
-}
-
-.title2-home {
-    font-family: "Poppins", sans-serif;
-    color: white;
-    font-size: 400%;
-    margin: 0;
-    text-align: center;
-    padding: 0;
-}
-
-.desc-home {
-    color: white;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    font-size: 20px;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-.page-shell {
+  }
+  
+  /* ── PAGE SHELL ── */
+  .page-shell {
     width: min(1120px, calc(100% - 48px));
     margin: 0 auto 60px;
-}
-
-.page-hero {
-    text-align: center;
-    color: var(--color-text);
-    padding: 32px 24px 24px;
-}
-
-.hero-tag {
-    display: inline-block;
-    padding: 8px 16px;
-    border-radius: 999px;
-    background: rgba(245, 207, 84, 0.16);
-    border: 1px solid rgba(245, 207, 84, 0.45);
-    color: var(--color-gold);
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-.page-intro {
-    max-width: 720px;
-    margin: 16px auto 0;
-    font-size: 18px;
-    line-height: 1.8;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-/* DEPARTAMENTOS */
-
-.card-departamento1 {
-    width: 80%;
-    height: 500px;
-    background-color: rgb(243, 243, 243);
-    border-radius: 10px;
+  }
+  
+  /* ── DEPARTAMENTOS ── */
+  .cards-section {
+    max-width: 1100px;
+    margin: 50px auto 0;
+    padding: 0 32px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .dept-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    background: var(--glass);
+    backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.35s, box-shadow 0.35s;
+    min-height: 400px;
+  }
+  
+  .dept-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 48px 100px rgba(0, 0, 0, 0.5);
+  }
+  
+  .dept-card.reverse {
+    direction: rtl;
+  }
+  
+  .dept-card.reverse > * {
+    direction: ltr;
+  }
+  
+  .card-img-wrap {
+    position: relative;
+    overflow: hidden;
+    min-height: 320px;
+  }
+  
+  .card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  
+  .dept-card:hover .card-img-wrap img {
+    transform: scale(1.05);
+  }
+  
+  .card-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(7, 26, 62, 0.25) 0%, transparent 60%);
+  }
+  
+  .card-content {
+    padding: 52px 48px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+  
+  .card-tag {
+    display: inline-flex;
     align-items: center;
-    color: black;
-    font-family: "Poppins", sans-serif;
-    font-size: 20px;
-    justify-self: center;
-}
-
-/* PROGRAMAÇÃO */
-
-.title-programacao {
+    gap: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  
+  .card-tag::before {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: var(--gold);
+  }
+  
+  .card-content h2 {
+    font-size: clamp(28px, 3vw, 38px);
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--text);
+    margin-bottom: 20px;
+  }
+  
+  .card-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 0;
+  }
+  
+  /* ── PROGRAMAÇÃO ── */
+  .title-programacao {
     color: white;
     text-align: center;
     font-size: clamp(36px, 5vw, 54px);
     margin: 18px 0 0;
-}
-
-.programacao-grid {
+  }
+  
+  .programacao-grid {
     gap: 24px;
     margin-top: 20px;
-}
-
-.programacao-card,
-.contato-card {
+  }
+  
+  .programacao-card,
+  .contato-card {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(7, 33, 79, 0.8));
     border: 1px solid var(--color-border);
     border-radius: 24px;
@@ -178,15 +287,15 @@ a {
     color: var(--color-text);
     box-shadow: var(--shadow-soft);
     backdrop-filter: blur(10px);
-}
-
-.programacao-card.destaque,
-.contato-card.destaque {
+  }
+  
+  .programacao-card.destaque,
+  .contato-card.destaque {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.18), rgba(7, 33, 79, 0.8));
-}
-
-.programacao-dia,
-.contato-label {
+  }
+  
+  .programacao-dia,
+  .contato-label {
     display: inline-block;
     margin-bottom: 16px;
     color: var(--color-gold);
@@ -194,97 +303,135 @@ a {
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-}
-
-.programacao-card h2 {
+  }
+  
+  .programacao-card h2 {
     margin: 0;
     font-size: 28px;
     line-height: 1.2;
-}
-
-.programacao-horario {
+  }
+  
+  .programacao-horario {
     margin: 18px 0 10px;
     color: var(--color-gold-strong);
     font-size: 22px;
     font-weight: 600;
-}
-
-.programacao-desc {
+  }
+  
+  .programacao-desc {
     margin: 0;
     font-size: 17px;
     line-height: 1.75;
-}
-
-.title-contatos {
+  }
+  
+  /* ── CONTATOS ── */
+  .title-contatos {
     color: white;
     text-align: center;
     font-size: clamp(36px, 5vw, 54px);
     margin: 18px 0 0;
-}
-
-.contatos-grid {
+  }
+  
+  .contatos-grid {
     display: flex;
     gap: 24px;
     margin-top: 20px;
-}
-
-.txt-contatos {
+  }
+  
+  .txt-contatos {
     color: white;
     font-size: 24px;
     line-height: 1.6;
     margin: 0;
-}
-
-.contato-link:hover {
+  }
+  
+  .contato-link:hover {
     background-color: #fff1b8;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.22);
     transform: translateY(-2px);
-}
-
-.contato-aux {
+  }
+  
+  .contato-aux {
     margin: 14px 0 0;
     color: rgba(255, 255, 255, 0.82);
     line-height: 1.8;
     font-size: 16px;
-}
-
-@media (max-width: 900px) {
+  }
+  
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 32px 24px;
+    border-top: 1px solid var(--glass-border);
+    font-size: 13px;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+  }
+  
+  /* ── RESPONSIVO ── */
+  @media (max-width: 900px) {
     .programacao-grid,
     .contatos-grid {
-        grid-template-columns: 1fr;
+      grid-template-columns: 1fr;
     }
-
+  
     .programacao-card.destaque,
     .contato-card.destaque {
-        transform: none;
+      transform: none;
     }
-}
-
-@media (max-width: 640px) {
+  }
+  
+  @media (max-width: 768px) {
+    header {
+      padding: 16px 24px;
+      flex-direction: column;
+      gap: 16px;
+    }
+  
+    .nav-home {
+      gap: 20px;
+    }
+  
+    .cards-section {
+      padding: 0 20px 64px;
+      gap: 28px;
+    }
+  
+    .dept-card {
+      grid-template-columns: 1fr;
+      min-height: auto;
+    }
+  
+    .dept-card.reverse {
+      direction: ltr;
+    }
+  
+    .card-img-wrap {
+      min-height: 240px;
+    }
+  
+    .card-content {
+      padding: 32px 28px;
+    }
+  }
+  
+  @media (max-width: 640px) {
     .page-shell {
-        width: min(100% - 28px, 1120px);
+      width: min(100% - 28px, 1120px);
     }
-
-    .page-hero {
-        padding: 20px 6px 16px;
-    }
-
-    .page-intro {
-        font-size: 16px;
-    }
-
+  
     .programacao-card,
     .contato-card {
-        padding: 22px;
-        border-radius: 20px;
+      padding: 22px;
+      border-radius: 20px;
     }
-
+  
     .programacao-card h2 {
-        font-size: 24px;
+      font-size: 24px;
     }
-
+  
     .programacao-horario,
     .txt-contatos {
-        font-size: 20px;
+      font-size: 20px;
     }
-}
+  }
