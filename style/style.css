@@ -23,7 +23,6 @@
     --glass-border: rgba(255, 255, 255, 0.14);
     --text: #f2ede4;
     --text-muted: rgba(242, 237, 228, 0.65);
-  
     --color-gold: #f5cf54;
     --color-gold-strong: #ffd447;
     --color-blue-deep: #07214f;
@@ -113,7 +112,7 @@
   
   /* ── HOME ── */
   .banner-home {
-    width: 450px;
+    width: 500px;
     text-align: center;
     display: block;
     justify-self: center;
