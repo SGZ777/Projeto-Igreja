@@ -453,12 +453,14 @@
     }
   }
   .section-mapa{
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 100px;    
   }
   .txt-localizacao{
     text-align: center;
-    color: white;
-    font-size: 24px;
+    color: var(--color-gold-strong);
+    font-size: 32px;
+    font-weight: bold;
   }
   .mapa-localizacao{
     display: block;
