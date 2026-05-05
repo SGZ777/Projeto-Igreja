@@ -116,7 +116,7 @@
     text-align: center;
     display: block;
     justify-self: center;
-    margin-top: 50px;
+    margin-top: 30px;
   }
   
   .title1-home {
@@ -161,6 +161,7 @@
   .btn-saibamais:hover {
     background-color: rgb(1, 55, 148);
     color: rgb(251, 251, 251);
+    transform: scale(1.01);
     box-shadow: 9px 9px 13px -3px rgba(0, 0, 0, 1);
   }
   
@@ -295,6 +296,10 @@
     color: var(--color-text);
     box-shadow: var(--shadow-soft);
     backdrop-filter: blur(10px);
+    transform: 0.3s ease;
+  }
+  .programacao-card:hover, .contato-card:hover {
+    transform: scale(1.01);
   }
   
   .programacao-card.destaque,
