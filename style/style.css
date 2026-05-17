@@ -36,8 +36,18 @@
     background: url('../images/wallpaper-home.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
     animation: fadeIn 0.5s ease-in forwards;
     font-family: 'Outfit', sans-serif !important;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
   }
   
   a {
@@ -50,7 +60,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 22px 48px;
+    gap: 24px;
+    padding: 22px clamp(20px, 5vw, 48px);
     border-bottom: 1px solid var(--glass-border);
     backdrop-filter: blur(12px);
     background: rgba(7, 26, 62, 0.7);
@@ -73,7 +84,9 @@
   .nav-home {
     list-style: none;
     display: flex;
-    gap: 36px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px clamp(18px, 4vw, 36px);
     margin: 0;
     padding: 0;
   }
@@ -112,32 +125,35 @@
   
   /* ── HOME ── */
   .banner-home {
-    width: 650px;
+    width: min(650px, calc(100% - 32px));
     text-align: center;
     display: block;
-    justify-self: center;
-    margin-top: 30px;
+    margin: clamp(24px, 5vw, 30px) auto 0;
   }
   
   .title1-home {
     color: white;
-    font-size: 400%;
+    font-size: clamp(38px, 9vw, 64px);
+    line-height: 1.05;
     margin: 0;
     text-align: center;
+    padding: 0 16px;
   }
   
   .title2-home {
     color: white;
-    font-size: 400%;
+    font-size: clamp(38px, 9vw, 64px);
+    line-height: 1.05;
     margin: 0;
     text-align: center;
-    padding: 0;
+    padding: 0 16px;
   }
   
   .desc-home {
     color: white;
     text-align: center;
-    font-size: 20px;
+    font-size: clamp(17px, 4vw, 20px);
+    padding: 0 18px;
   }
   
   .btn-saibamais {
@@ -296,7 +312,8 @@
     color: var(--color-text);
     box-shadow: var(--shadow-soft);
     backdrop-filter: blur(10px);
-    transform: 0.3s ease;
+    transition: transform 0.3s ease;
+    min-width: 0;
   }
   .programacao-card:hover, .contato-card:hover {
     transform: scale(1.01);
@@ -362,15 +379,21 @@
   
   .contatos-grid {
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
     margin-top: 20px;
+  }
+
+  .contatos-grid .contato-card {
+    flex: 1 1 280px;
   }
   
   .txt-contatos {
     color: white;
-    font-size: 24px;
+    font-size: clamp(19px, 3vw, 24px);
     line-height: 1.6;
     margin: 0;
+    overflow-wrap: anywhere;
   }
   
   .contato-link:hover {
@@ -388,11 +411,6 @@
   
   /* ── RESPONSIVO ── */
   @media (max-width: 900px) {
-    .programacao-grid,
-    .contatos-grid {
-      grid-template-columns: 1fr;
-    }
-  
     .programacao-card.destaque,
     .contato-card.destaque {
       transform: none;
@@ -400,6 +418,10 @@
   }
   
   @media (max-width: 768px) {
+    body {
+      background-attachment: scroll;
+    }
+
     header {
       padding: 16px 24px;
       flex-direction: column;
@@ -435,7 +457,7 @@
   
   @media (max-width: 640px) {
     .page-shell {
-      width: min(100% - 28px, 1120px);
+      width: min(1120px, calc(100% - 28px));
     }
 
     .page-hero {
@@ -446,6 +468,7 @@
     .contato-card {
       padding: 22px;
       border-radius: 20px;
+      margin-bottom: 18px;
     }
   
     .programacao-card h2 {
@@ -455,6 +478,32 @@
     .programacao-horario,
     .txt-contatos {
       font-size: 20px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    header {
+      padding: 14px;
+    }
+
+    .logo-home {
+      height: 54px;
+    }
+
+    .nav-home {
+      gap: 12px 14px;
+    }
+
+    .nav-home a {
+      font-size: 12px;
+    }
+
+    .card-content {
+      padding: 28px 22px;
+    }
+
+    .card-img-wrap {
+      min-height: 210px;
     }
   }
   .section-mapa{
@@ -469,9 +518,26 @@
   }
   .mapa-localizacao{
     display: block;
-    justify-self: center;
+    width: min(800px, 100%);
+    max-width: 100%;
     height: 450px;
+    margin: 0 auto;
     border: 0;
     border-radius: 12px;
     box-shadow: var(--shadow-soft);
-  } 
+  }
+
+  @media (max-width: 640px) {
+    .section-mapa {
+      margin-top: 36px;
+      margin-bottom: 64px;
+    }
+
+    .txt-localizacao {
+      font-size: 26px;
+    }
+
+    .mapa-localizacao {
+      height: 340px;
+    }
+  }
